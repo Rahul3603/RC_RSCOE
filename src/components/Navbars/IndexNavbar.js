@@ -73,12 +73,12 @@ export default function Navbar() {
               </li>
 
               <li className="flex items-center">
-                <Link to="/auth/signin">
+                <Link to="/auth/login">
                 <button
                   className="bg-rc-blue-600 text-white active:bg-rc-blue hover:bg-rc-blue text-sm font-semibold uppercase px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                   type="button"
                 >
-                  <i className="fa-solid fa-right-to-bracket"></i> Sign In
+                  <i className="fa-solid fa-right-to-bracket"></i> Log In
                 </button>
                 </Link>
               </li>

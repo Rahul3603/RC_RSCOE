@@ -1,5 +1,5 @@
 import React from "react";
-import CardProfile from "components/Cards/CardProfile.js";
+import CardProfile from "../../components/Cards/CardProfile.js";
 
 export default function Team() {
   return (

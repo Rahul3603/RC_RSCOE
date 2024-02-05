@@ -6,8 +6,8 @@ import { Switch, Route, Redirect } from "react-router-dom";
 
 // views
 
-import Login from "views/auth/Login.js";
-import Register from "views/auth/Register.js";
+import Login from "../views/auth/Login.js";
+import Register from "../views/auth/Register.js";
 
 export default function Auth() {
   return (
