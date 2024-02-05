@@ -10,9 +10,9 @@ import FooterAdmin from "../components/Footers/FooterAdmin.js";
 // views
 
 import Dashboard from "../views/admin/Dashboard.js";
-import Maps from "../views/admin/Maps.js";
 import Tables from "../views/admin/Tables.js";
 import Team from "../views/admin/Team.js";
+import Events from "../views/admin/Events.js";
 
 export default function Admin() {
   return (
@@ -23,7 +23,7 @@ export default function Admin() {
         <div className="w-full">
           <Switch>
             <Route path="/admin/dashboard" exact component={Dashboard} />
-            <Route path="/admin/maps" exact component={Maps} />
+            <Route path="/admin/events" exact component={Events} />
             <Route path="/admin/team" exact component={Team} />
             <Route path="/admin/tables" exact component={Tables} />
             <Redirect from="/admin" to="/admin/dashboard" />

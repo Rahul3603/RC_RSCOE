@@ -11,7 +11,7 @@ export default function CardProfile() {
           <div className="flex flex-wrap justify-center">
             <div className="flex items-center w-full px-1 text-center mt-1">
               <div className="flex justify-center h-4/6 lg:pt-0">
-                <img src={require("../../assets/img/team-2-800x800.jpg")} alt=""  className="rounded-full border-4 border-rc-black"/>
+                <img src={require("../../assets/img/team-2-800x800.jpg")} alt=""  className="rounded-full border-4 border-rc-blue"/>
               </div>
             </div>
           </div>

@@ -104,16 +104,16 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/settings") !== -1
+                    (window.location.href.indexOf("/admin/events") !== -1
                       ? "text-rose-700 hover:text-rose-800"
                       : "text-slate-700 hover:text-slate-500")
                   }
-                  to="/admin/settings"
+                  to="/admin/events"
                 >
                   <i
                     className={
                       "fa-regular fa-calendar mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/settings") !== -1
+                      (window.location.href.indexOf("/admin/events") !== -1
                         ? "opacity-75"
                         : "text-slate-300")
                     }
