@@ -10,6 +10,9 @@ export default function Events() {
         <div className="w-full lg:w-10/12 px-4">
           <CardEvent />
         </div>
+        <div className="w-full lg:w-10/12 px-4">
+          <CardEvent />
+        </div>
       </div>
     </>
   );

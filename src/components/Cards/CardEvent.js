@@ -19,7 +19,7 @@ export default function CardEvent() {
         </div> */}
         <div className="flex-auto px-3 lg:px-5 py-5">
           <div className="flex flex-wrap items-center justify-center">
-            <div className="w-full lg:w-4/12 px-4">
+            <div className="w-full xl:w-5/12 2xl:w-4/12 px-4">
               <div className="relative w-full">
                 <div className="w-full">
                   <img
@@ -30,7 +30,7 @@ export default function CardEvent() {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-8/12 px-4 md:px-8">
+            <div className="w-full xl:w-7/12 2xl:w-8/12 px-4 md:px-8">
               <div className="relative w-full mb-3">
                 <div >
                   <h1 className="uppercase font-semibold text-2xl md:text-4xl py-5 pb-1 md:py-3 text-rc-black border-b-8 border-rc-red w-fit">
