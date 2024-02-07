@@ -5,12 +5,18 @@ import { Link } from "react-router-dom";
 import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 import Footer from "../components/Footers/Footer.js";
 
-import pattern from "../assets/img/pattern_react.png"
+import pattern from "../assets/img/pattern_react.png";
+import HomeSlider from "../components/Sliders/HomeSlider.js";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
+      <div className="w-full p-0 m-0 h-[80vh] bg-black">
+        <HomeSlider />
+      </div>
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
@@ -236,7 +242,9 @@ export default function Index() {
                 />
                 <img
                   alt="..."
-                  src={require("../assets/img/component-profile-card.png").default}
+                  src={
+                    require("../assets/img/component-profile-card.png").default
+                  }
                   className="w-full align-middle rounded-lg absolute shadow-lg -top-160-px left-260-px max-w-210-px"
                 />
                 <img
@@ -429,9 +437,9 @@ export default function Index() {
                 </h3>
                 <p className="mt-4 text-lg leading-relaxed text-slate-500">
                   This extension comes a lot of fully coded examples that help
-                  you get started fa-solidter. You can adjust the colors and also the
-                  programming language. You can change the text and images and
-                  you're good to go.
+                  you get started fa-solidter. You can adjust the colors and
+                  also the programming language. You can change the text and
+                  images and you're good to go.
                 </p>
                 <ul className="list-none mt-6">
                   <li className="py-2">
