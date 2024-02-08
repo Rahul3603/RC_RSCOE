@@ -14,10 +14,10 @@ export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
-      <div className="w-full p-0 m-0 h-[80vh] bg-black">
+      <div className="w-full p-0 m-0 h-[100vh] bg-black">
         <HomeSlider />
       </div>
-      <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+      <section className="header relative pt-16 items-center flex h-screen max-h-860-px ">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
@@ -58,7 +58,7 @@ export default function Index() {
         </div>
 
         <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
+          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 sm:mt-0 w-10/12 max-h-860px "
           src={pattern}
           alt="..."
         />

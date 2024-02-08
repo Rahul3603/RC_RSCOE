@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "10.4.5",
     "chart.js": "2.9.4",
+    "framer-motion": "^11.0.3",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
     "postcss": "^8.4.33",

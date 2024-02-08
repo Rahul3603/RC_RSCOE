@@ -87,7 +87,7 @@ export default function CardEditEvent() {
                   </div>
                   <div className="text-gray-600">
                     <a
-                      href="#"
+                      href="#pablo"
                       className="font-medium text-primary-500 hover:text-primary-700"
                     >
                       Click to upload

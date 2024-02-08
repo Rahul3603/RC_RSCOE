@@ -21,6 +21,32 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
+      primary: "#be123c",
+                "primary-content": "#fbd4de",
+                "primary-dark": "#8f0e2d",
+                "primary-light": "#e91a4c",
+
+                secondary: "#123cbe",
+                "secondary-content": "#d4defb",
+                "secondary-dark": "#0e2d8f",
+                "secondary-light": "#1a4ce9",
+
+                background: "#f0f0f0",
+                foreground: "#fbfbfb",
+                border: "#dfdfdf",
+
+                copy: "#262626",
+                "copy-light": "#666666",
+                "copy-lighter": "#8c8c8c",
+
+                success: "#12be12",
+                warning: "#bebe12",
+                error: "#be1212",
+
+                "success-content": "#d4fbd4",
+                "warning-content": "#000000",
+                "error-content": "#fbd4d4",
+                
       'rc-white': { DEFAULT: '#fdfffc', 100: '#226500', 200: '#43ca00', 300: '#75ff30', 400: '#b8ff95', 500: '#fdfffc', 600: '#fcfffb', 700: '#fdfffc', 800: '#fefffd', 900: '#fefffe' },
       'rc-blue': { DEFAULT: '#0066ff', 100: '#001433', 200: '#002966', 300: '#003d99', 400: '#0052cc', 500: '#0066ff', 600: '#3385ff', 700: '#66a3ff', 800: '#99c2ff', 900: '#cce0ff' }, 
       'rc-red': { DEFAULT: '#be123c', 100: '#26040c', 200: '#4d0718', 300: '#730b25', 400: '#990e31', 500: '#be123c', 600: '#eb2355', 700: '#f05a7f', 800: '#f591aa', 900: '#fac8d4' }, 
