@@ -1,23 +1,59 @@
 /*eslint-disable*/
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 import Footer from "../components/Footers/Footer.js";
 
 import pattern from "../assets/img/pattern_react.png";
-import HomeSlider from "../components/Sliders/HomeSlider.js";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Team from "../components/Cards/Team.js";
+import HeroSection from "../components/Sliders/HeroSection.js";
+import IndexSlider from "../components/Sliders/IndexSlider.js";
 
 export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
       <div className="w-full p-0 m-0 h-[100vh] bg-black">
-        <HomeSlider />
+        <HeroSection />
       </div>
-      <section className="header relative pt-16 items-center flex h-screen max-h-860-px ">
+      <div className="w-full p-8 h-[100vh] bg-slate-50 ">
+        <div className="mb-7 md:mb-3">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 2,
+              delay: 0.25,
+            }}
+            className="text-4xl md:text-5xl text-gray-700 font-semibold font-[Montserrat] border-b-8 pb-2 border-primary w-fit ml-10 -mb-16 mt-12"
+          >
+            Our Team
+          </motion.h1>
+        </div>
+        <div className="h-full flex items-center w-full">
+          <Team />
+        </div>
+      </div>
+      <div className="w-full p-0 h-[95vh] bg-slate-50 ">
+            <IndexSlider/>
+        {/* <div className="mb-7 md:mb-3">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 2,
+                delay: 0.25,
+              }}
+              className="text-4xl md:text-5xl text-gray-700 font-semibold font-[Montserrat] border-b-8 pb-2 border-primary w-fit ml-10 -mb-16 mt-12"
+            >
+              Achievements
+            </motion.h1>
+          </div> */}
+      </div>
+      <section className="header relative mt-96 items-center flex h-screen max-h-860-px ">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">

@@ -14,6 +14,7 @@ export default function Navbar() {
         transition={{
           duration: 1,
           ease: "easeInOut",
+          delay:1,
         }}
         className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between py-3 navbar-expand-lg bg-white shadow"
       >
@@ -24,7 +25,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               transition={{
                 duration: 1.5,
-                delay: 0.7,
+                delay: 1,
                 ease: "easeInOut",
               }}
             >
@@ -45,7 +46,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               transition={{
                 duration: 1.5,
-                delay: 1.5,
+                delay: 2.2,
               }}
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
@@ -70,7 +71,7 @@ export default function Navbar() {
               animate={{ y: 0 }}
               transition={{
                 duration: 1.5,
-                delay: 1.5,
+                delay: 2.2,
               }}
               className="flex flex-col lg:flex-row list-none lg:ml-auto"
             >
@@ -84,14 +85,6 @@ export default function Navbar() {
                   </a>
                 </Link>
               </li>
-              <li className="flex items-center">
-                <a
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
-                  href="#"
-                >
-                  Events
-                </a>
-              </li>
 
               <li className="flex items-center">
                 <a
@@ -101,16 +94,42 @@ export default function Navbar() {
                   Our Team
                 </a>
               </li>
+              {/* <li className="flex items-center">
+                <a
+                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
+                  href="#"
+                >
+                  Events
+                </a>
+              </li> */}
+              <li className="flex items-center">
+                <a
+                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
+                  href="#"
+                >
+                  Achievements
+                </a>
+              </li>
 
               <li className="flex items-center">
                 <a
                   className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
                   href=""
                 >
-                  Contact
+                  About Us
                 </a>
               </li>
 
+              <li className="flex items-center">
+                <Link to="/">
+                  <button
+                    className="bg-primary text-primary-content active:bg-primary-dark hover:bg-primary-dark text-sm font-semibold uppercase px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+                    type="button"
+                  >
+                    Contact
+                  </button>
+                </Link>
+              </li>
               {/* <li className="flex items-center">
                 <Link to="/auth/login">
                   <button
