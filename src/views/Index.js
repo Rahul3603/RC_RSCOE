@@ -17,7 +17,7 @@ export default function Index() {
       <div className="w-full p-0 m-0 h-[100vh] bg-black">
         <HeroSection />
       </div>
-      <div className="w-full p-8 h-[100vh] bg-slate-50 ">
+      <div className="w-full p-8 h-full bg-slate-50 ">
         <div className="mb-7 md:mb-3">
           <motion.h1
             initial={{ opacity: 0 }}
@@ -27,12 +27,12 @@ export default function Index() {
               duration: 2,
               delay: 0.25,
             }}
-            className="text-4xl md:text-5xl text-gray-700 font-semibold font-[Montserrat] border-b-8 pb-2 border-primary w-fit ml-10 -mb-16 mt-12"
+            className="text-3xl md:text-5xl text-gray-700 font-medium font-[Montserrat] border-b-4 pb-1 border-primary w-fit md:ml-10 -mb-20 md:-mb-14 mt-6 mb:mt-12"
           >
             Our Team
           </motion.h1>
         </div>
-        <div className="h-full flex items-center w-full">
+        <div className="h-full flex items-center w-full mt-20 py-10">
           <Team />
         </div>
       </div>
