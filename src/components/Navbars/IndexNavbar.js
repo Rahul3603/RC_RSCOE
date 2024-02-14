@@ -116,7 +116,7 @@ export default function Navbar() {
 
               <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <a
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
+                  className="hover:text-slate-500 active:text-primary-dark text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
                   href="#"
                 >
                   About Us

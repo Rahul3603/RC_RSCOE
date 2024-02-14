@@ -22,8 +22,8 @@ export default function IndexSlider() {
   const events = [
     {
       slide: slide1,
-      name: "RTR. Samruddhi Parte",
-      date: "17 Jan 2023",
+      name: "Independence Day with Rotaract Club of RSCOE",
+      date: "15 Aug 2023",
     },
     {
       slide: slide2,
@@ -32,8 +32,8 @@ export default function IndexSlider() {
     },
     {
       slide: slide3,
-      name: "RTR. Samruddhi Parte",
-      date: "19 Jan 2023",
+      name: "GO GREEN Tree Plantation Day at Banner Hills!",
+      date: "9 Aug 2023",
     },
   ];
   return (
@@ -56,29 +56,26 @@ export default function IndexSlider() {
                   src={event.slide}
                   alt={event.name}
                 />
-                <motion.h1
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 3 }}
+                <motion.div
+                initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   transition={{
                     duration: 1,
                     delay: 0.5,
                   }}
-                  className="relative bottom-12 left-2 md:bottom-24 md:left-10 font-extrabold font-[Montserrat] text-primary text-lg md:text-3xl"
+                  className="relative bottom-12 left-2 md:bottom-24 md:left-10 w-fit bg-primary-content/40 rounded p-1"
+                  >
+                <h1
+                  className="font-extrabold font-[Montserrat] text-primary text-sm md:text-3xl"
                 >
                   {event.name}
-                </motion.h1>
-
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 3 }}
-                  transition={{
-                    duration: 1,
-                    delay: 0.5,
-                  }}
-                  className="relative bottom-14 left-2 md:bottom-24 md:left-10 font-bold font-[Montserrat] text-base md:text-2xl"
+                </h1>
+                <p
+                  className="font-bold font-[Montserrat] text-xs md:text-2xl"
                 >
                   {event.date}
-                </motion.p>
+                </p>
+                </motion.div>
               </div>
             </div>
           ))}
