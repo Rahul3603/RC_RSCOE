@@ -1,162 +1,171 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <>
-      <footer className="relative bg-slate-200 pt-8 pb-6">
-        <div
-          className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
-          style={{ transform: "translateZ(0)" }}
-        >
-          <svg
-            className="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              className="text-slate-200 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap text-center lg:text-left">
-            <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl font-semibold">Let's keep in touch!</h4>
-              <h5 className="text-lg mt-0 mb-2 text-slate-600">
-                Find us on any of these platforms, we respond 1-2 business days.
-              </h5>
-              <div className="mt-6 lg:mb-0 mb-6">
-                <button
-                  className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
+    <footer className="bg-black pb-[30px] text-sm text-white w-full">
+      <div className="pt-[60px] pb-[30px]">
+        <div className="container px-3 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 m-auto">
+            <div className="m-auto">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                }}
+                className="mb-4 bg-black border-t-4 border-solid border-primary text-center px-5 py-7"
+              >
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    duration: 1,
+                    delay: 0.5,
+                  }}
                 >
-                  <i className="fab fa-twitter"></i>
-                </button>
-                <button
-                  className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
+                  <h3 className="text-2xl py-1 font-bold text-primary">
+                    Rotaract Club
+                  </h3>
+                  <p className="text-base mb-2 font-semibold">
+                    Sponsored by Rotary Club of Akurdi
+                    <br />
+                    Zone 03 | RID 3131
+                    <br />
+                  </p>
+                  <p className="text-sm mb-0">
+                    JSPM's Rajarshi Shahu College of Engineering
+                    <br />
+                    Ashok Nagar, Tathawade, Pimpri-Chinchwad,
+                    <br />
+                    Maharashtra 411033
+                    <br />
+                    <br />
+                    <strong>Email:</strong>
+                    <a href="mailto:rscoerotaract@gmail.com">
+                      <p className="text-primary">rscoerotaract@gmail.com</p>
+                    </a>
+                    <br />
+                  </p>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    duration: 1,
+                    delay: 0.7,
+                  }}
+                  className="mt-3 text-2xl"
                 >
-                  <i className="fab fa-facebook-square"></i>
-                </button>
-                <button
-                  className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-dribbble"></i>
-                </button>
-                <button
-                  className="bg-white text-slate-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-github"></i>
-                </button>
-              </div>
+                  <a
+                    href="https://m.facebook.com/rcrscoe"
+                    className="inline-block mx-2 hover:text-primary"
+                  >
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a
+                    href="https://instagram.com/rc_rscoe?igshid=MzRlODBiNWFlZA=="
+                    className="inline-block mx-2 hover:text-primary"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/rotaract-club-of-rscoe/"
+                    className="inline-block mx-2 hover:text-primary"
+                  >
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a
+                    href="https://twitter.com/rc_rscoe?t=EFP2HzitjSsWTs1nciyWYA&s=09"
+                    className="inline-block mx-2 hover:text-primary"
+                  >
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a
+                    href="https://t.me/rc_rscoe"
+                    className="inline-block mx-2 hover:text-primary"
+                  >
+                    <i class="fa-brands fa-telegram"></i>
+                  </a>
+                </motion.div>
+              </motion.div>
             </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
-                  <span className="block uppercase text-slate-500 text-sm font-semibold mb-2">
-                    Useful Links
-                  </span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <a
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/presentation?ref=nr-footer"
-                      >
-                        About Us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="https://blog.creative-tim.com?ref=nr-footer"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="https://www.github.com/creativetimofficial?ref=nr-footer"
-                      >
-                        Github
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/bootstrap-themes/free?ref=nr-footer"
-                      >
-                        Free Products
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-slate-500 text-sm font-semibold mb-2">
-                    Other Resources
-                  </span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <a
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="https://github.com/creativetimofficial/notus-react/blob/main/LICENSE.md?ref=nr-footer"
-                      >
-                        MIT License
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/terms?ref=nr-footer"
-                      >
-                        Terms & Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/privacy?ref=nr-footer"
-                      >
-                        Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/contact-us?ref=nr-footer"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr className="my-6 border-slate-300" />
-          <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="text-sm text-slate-500 font-semibold py-1">
-                Copyright © {new Date().getFullYear()} Notus React by{" "}
-                <a
-                  href="https://www.creative-tim.com?ref=nr-footer"
-                  className="text-slate-500 hover:text-slate-800"
-                >
-                  Creative Tim
-                </a>
-                .
-              </div>
-            </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 1,
+                delay: 1,
+              }}
+              className="m-auto"
+            >
+              <h4 className="text-lg font-medium pb-3">Useful Links</h4>
+              <ul>
+                <li className="py-2">
+                  <i className="fa-solid fa-chevron-right inline-block text-primary"></i>{" "}
+                  <a
+                    href="#hero"
+                    className="text-sm font-normal hover:text-primary"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li className="py-2">
+                  <i className="fa-solid fa-chevron-right inline-block text-primary"></i>{" "}
+                  <a
+                    href="#hero"
+                    className="text-sm font-normal hover:text-primary"
+                  >
+                    Our Team
+                  </a>
+                </li>
+                <li className="py-2">
+                  <i className="fa-solid fa-chevron-right inline-block text-primary"></i>{" "}
+                  <a
+                    href="#about"
+                    className="text-sm font-normal hover:text-primary"
+                  >
+                    Events
+                  </a>
+                </li>
+                <li className="py-2">
+                  <i className="fa-solid fa-chevron-right inline-block text-primary"></i>{" "}
+                  <a
+                    href="#contact"
+                    className="text-sm font-normal hover:text-primary"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </motion.div>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+          delay: 1,
+        }}
+        className="w-full"
+      >
+        <div className="border-t-[1px] border-solid border-primary text-center pt-8 text-base">
+          &copy; Copyright{" "}
+          <strong>
+            <span>Rotaract Club </span>
+          </strong>
+          . All Rights Reserved
+        </div>
+        <div className="pt-2 text-center text-sm">
+          Designed by{" "}
+          <a href="hgfvfh" className="text-primary">
+            Rahul, Sumit, Gaurav
+          </a>
+        </div>
+      </motion.div>
+    </footer>
   );
 }

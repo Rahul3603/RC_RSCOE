@@ -3,12 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
-import slide1 from "../../assets/img/slides/Slide1.jpg"
-import slide2 from "../../assets/img/slides/Slide2.jpg"
-import slide3 from "../../assets/img/slides/Slide3.jpg"
+import slide1 from "../../assets/img/slides/Slide1.jpg";
+import slide2 from "../../assets/img/slides/Slide2.jpg";
+import slide3 from "../../assets/img/slides/Slide3.jpg";
 
 export default function IndexSlider() {
-
   var settings = {
     dots: false,
     infinite: true,
@@ -16,10 +15,9 @@ export default function IndexSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     arrows: false,
   };
-
 
   const events = [
     {
@@ -29,8 +27,8 @@ export default function IndexSlider() {
     },
     {
       slide: slide2,
-      name: "RTR. Samruddhi Parte",
-      date: "18 Jan 2023",
+      name: "CSD & CMD EVENT at ISKCON Temple",
+      date: "7 Aug 2023",
     },
     {
       slide: slide3,
@@ -40,37 +38,52 @@ export default function IndexSlider() {
   ];
   return (
     <>
-      <div className="w-full h-[95vh] overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+          delay:0.5
+        }}
+        className="w-full h-[35vh] md:h-[95vh] overflow-hidden"
+      >
         <Slider {...settings}>
-        {events.map((event, index) => (
-          <div>
+          {events.map((event, index) => (
             <div>
-            <img
-                className="relative w-full h-[95vh] object-cover object-center"
-                src={event.slide}
-                alt={event.name}
-              />
-            <motion.h1
-            initial={{opacity:0}}
-            whileInView={{opacity:3}}
-            transition={{
-              duration:100
-            }}
-            className="relative bottom-24 left-10 font-extrabold font-[Montserrat] text-primary text-4xl">{event.name}</motion.h1>
-            
-            <motion.p
-            initial={{opacity:0}}
-            whileInView={{opacity:3}}
-            transition={{
-              duration:100
-            }}
-            className="relative bottom-24 left-10 font-bold font-[Montserrat] text-2xl">{event.date}</motion.p>
+              <div>
+                <img
+                  className="relative w-full h-[35vh] md:h-[95vh] object-cover object-center"
+                  src={event.slide}
+                  alt={event.name}
+                />
+                <motion.h1
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 3 }}
+                  transition={{
+                    duration: 1,
+                    delay: 0.5,
+                  }}
+                  className="relative bottom-12 left-2 md:bottom-24 md:left-10 font-extrabold font-[Montserrat] text-primary text-lg md:text-3xl"
+                >
+                  {event.name}
+                </motion.h1>
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 3 }}
+                  transition={{
+                    duration: 1,
+                    delay: 0.5,
+                  }}
+                  className="relative bottom-14 left-2 md:bottom-24 md:left-10 font-bold font-[Montserrat] text-base md:text-2xl"
+                >
+                  {event.date}
+                </motion.p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </Slider>
-      </div>
+      </motion.div>
     </>
   );
 }
-

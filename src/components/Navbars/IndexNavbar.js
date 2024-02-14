@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const menuClick=()=>{
+    setNavbarOpen
+  }
   return (
     <>
       <motion.nav
@@ -75,7 +78,7 @@ export default function Navbar() {
               }}
               className="flex flex-col lg:flex-row list-none lg:ml-auto"
             >
-              <li className="flex items-center">
+              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <Link>
                   <a
                     className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
@@ -86,7 +89,7 @@ export default function Navbar() {
                 </Link>
               </li>
 
-              <li className="flex items-center">
+              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <a
                   className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
                   href="#"
@@ -102,7 +105,7 @@ export default function Navbar() {
                   Events
                 </a>
               </li> */}
-              <li className="flex items-center">
+              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <a
                   className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
                   href="#"
@@ -111,16 +114,16 @@ export default function Navbar() {
                 </a>
               </li>
 
-              <li className="flex items-center">
+              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <a
                   className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
-                  href=""
+                  href="#"
                 >
                   About Us
                 </a>
               </li>
 
-              <li className="flex items-center">
+              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <Link to="/">
                   <button
                     className="bg-primary text-primary-content active:bg-primary-dark hover:bg-primary-dark text-sm font-semibold uppercase px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"

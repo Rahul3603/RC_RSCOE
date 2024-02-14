@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className=" mx-auto mt-0 w-full h-full bg-black">
         <motion.div 
         initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{opacity:1}}
             transition={{
               duration: 0.7,
             }}
@@ -26,12 +26,12 @@ export default function HeroSection() {
           >
             <div className="w-full md:w-3/12 flex justify-center lg:justify-end">
               <img
-                className="w-32 h-32 md:w-44 md:h-44 mt-10 lg:-mt-44 lg:mr-8"
+                className="w-28 h-28 md:w-44 md:h-44 mt-10 lg:-mt-44 lg:mr-8"
                 src={logo1}
                 alt="Rotaract Club"
               />
               <img
-                className="w-36 h-36 md:w-48 md:h-48 mt-10 visible lg:hidden"
+                className="w-32 h-32 md:w-48 md:h-48 mt-10 visible lg:hidden"
                 src={logo2}
                 alt="Rotaract Club"
               />
