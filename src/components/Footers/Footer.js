@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 export default function Footer() {
   return (
@@ -25,7 +26,7 @@ export default function Footer() {
                   }}
                 >
                   <h3 className="text-2xl py-1 font-bold text-primary">
-                    Rotaract Club
+                    Rotaract Club of RSCOE
                   </h3>
                   <p className="text-base mb-2 font-semibold">
                     Sponsored by Rotary Club of Akurdi
@@ -104,39 +105,55 @@ export default function Footer() {
               <ul>
                 <li className="py-2">
                   <i className="fa-solid fa-chevron-right inline-block text-primary"></i>{" "}
-                  <a
-                    href="#hero"
+                  <Link
+                    to="hero"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
                     className="text-sm font-normal hover:text-primary"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2">
                   <i className="fa-solid fa-chevron-right inline-block text-primary"></i>{" "}
-                  <a
-                    href="#hero"
+                  <Link
+                    to="team"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
                     className="text-sm font-normal hover:text-primary"
                   >
                     Our Team
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2">
                   <i className="fa-solid fa-chevron-right inline-block text-primary"></i>{" "}
-                  <a
-                    href="#about"
+                  <Link
+                    to="events"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
                     className="text-sm font-normal hover:text-primary"
                   >
                     Events
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2">
                   <i className="fa-solid fa-chevron-right inline-block text-primary"></i>{" "}
-                  <a
-                    href="#contact"
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-40}
+                    duration={500}
                     className="text-sm font-normal hover:text-primary"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.div>
@@ -155,7 +172,7 @@ export default function Footer() {
         <div className="border-t-[1px] border-solid border-primary text-center pt-8 text-base">
           &copy; Copyright{" "}
           <strong>
-            <span>Rotaract Club </span>
+            <span>Rotaract Club</span>
           </strong>
           . All Rights Reserved
         </div>

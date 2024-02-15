@@ -1,14 +1,14 @@
 /*eslint-disable*/
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 // components
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const menuClick=()=>{
-    setNavbarOpen
-  }
+  const menuClick = () => {
+    setNavbarOpen;
+  };
   return (
     <>
       <motion.nav
@@ -17,7 +17,7 @@ export default function Navbar() {
         transition={{
           duration: 1,
           ease: "easeInOut",
-          delay:1,
+          delay: 1,
         }}
         className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between py-3 navbar-expand-lg bg-white shadow"
       >
@@ -32,9 +32,9 @@ export default function Navbar() {
                 ease: "easeInOut",
               }}
             >
-              <Link
-                to="/"
-                className="text-slate-700 text-lg font-bold leading-relaxed mr-4 whitespace-nowrap uppercase  flex items-center"
+              <a
+                href="/"
+                className="text-slate-700 text-lg font-bold leading-relaxed mr-4 whitespace-nowrap uppercase flex items-center cursor-pointer"
               >
                 <img
                   className="w-10 h-10 mr-2 inline-block"
@@ -42,7 +42,7 @@ export default function Navbar() {
                   alt=""
                 />
                 Rotaract Club
-              </Link>
+              </a>
             </motion.div>
             <motion.button
               initial={{ opacity: 0 }}
@@ -78,24 +78,32 @@ export default function Navbar() {
               }}
               className="flex flex-col lg:flex-row list-none lg:ml-auto"
             >
-              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
-                <Link>
-                  <a
-                    className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
-                    href="#pablo"
-                  >
-                    Home
-                  </a>
+              <li className="flex items-center">
+                <Link
+                  to="hero"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
+                >
+                  Home
                 </Link>
               </li>
 
-              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
-                <a
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
-                  href="#"
+              <li className="flex items-center">
+                <Link
+                  to="team"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
                 >
                   Our Team
-                </a>
+                </Link>
               </li>
               {/* <li className="flex items-center">
                 <a
@@ -105,26 +113,43 @@ export default function Navbar() {
                   Events
                 </a>
               </li> */}
-              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
-                <a
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
-                  href="#"
+              <li className="flex items-center">
+                <Link
+                  to="events"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
                 >
-                  Achievements
-                </a>
+                  Events
+                </Link>
               </li>
 
-              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
-                <a
-                  className="hover:text-slate-500 active:text-primary-dark text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold"
-                  href="#"
+              <li className="flex items-center">
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                  className="hover:text-slate-500 active:text-primary-dark text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
 
-              <li className="flex items-center" onClick={() => setNavbarOpen(!navbarOpen)}>
-                <Link to="/">
+              <li className="flex items-center">
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-40}
+                  duration={500}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
                   <button
                     className="bg-primary text-primary-content active:bg-primary-dark hover:bg-primary-dark text-sm font-semibold uppercase px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                     type="button"

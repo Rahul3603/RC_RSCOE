@@ -90,7 +90,7 @@ export default function Contact() {
               transition={{
                 duration: 1,
               }}
-              className="flex justify-center mt-2"
+              className="flex justify-center mt-1"
             >
               <button className="bg-primary text-primary-content hover:bg-primary-dark active:bg-primary-dark font-bold uppercase text-sm mt-3 px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none transition duration-700 ease-in-out text-center w-36">
                 Send Message
