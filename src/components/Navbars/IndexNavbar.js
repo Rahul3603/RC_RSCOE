@@ -9,6 +9,11 @@ export default function Navbar() {
   const menuClick = () => {
     setNavbarOpen;
   };
+
+  const offsetSmallScreen = -90;
+  const offsetLargeScreen = -190;
+
+  const offset = window.innerWidth < 768 ? offsetSmallScreen : offsetLargeScreen; 
   return (
     <>
       <motion.nav
@@ -136,7 +141,7 @@ export default function Navbar() {
                   to="about"
                   spy={true}
                   smooth={true}
-                  offset={-300}
+                  offset={offset}
                   duration={500}
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   className="hover:text-primary text-slate-700 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
