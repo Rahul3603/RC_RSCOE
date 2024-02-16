@@ -1,6 +1,5 @@
 /*eslint-disable*/
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 import Footer from "../components/Footers/Footer.js";
@@ -59,7 +58,7 @@ export default function Index() {
           <Contact />
         </div>
       </div>
-      <div className="w-full p-0 h-[93vh] overflow-hidden bg-black flex justify-center items-center" id="about">
+      <div className="w-full p-0 h-[93vh] md:h-[75vh] overflow-hidden bg-black flex justify-center items-center" id="about">
         <Footer />
       </div>
     </>

@@ -80,29 +80,31 @@ export default function Navbar() {
             >
               <li className="flex items-center">
                 <Link
+                  activeClass="text-[#be123c]"   
                   to="hero"
                   spy={true}
                   smooth={true}
-                  offset={0}
+                  offset={-50}
                   duration={500}
                   onClick={() => setNavbarOpen(!navbarOpen)}
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
+                  className="hover:text-primary text-slate-700 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
                 >
-                  Home
+                  <DrawBottomBorder>Home</DrawBottomBorder>
                 </Link>
               </li>
 
               <li className="flex items-center">
                 <Link
+                  activeClass="text-[#be123c]"  
                   to="team"
                   spy={true}
                   smooth={true}
                   offset={-50}
                   duration={500}
                   onClick={() => setNavbarOpen(!navbarOpen)}
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
+                  className="hover:text-primary text-slate-700 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
                 >
-                  Our Team
+                  <DrawBottomBorder>Our Team</DrawBottomBorder>
                 </Link>
               </li>
               {/* <li className="flex items-center">
@@ -115,29 +117,31 @@ export default function Navbar() {
               </li> */}
               <li className="flex items-center">
                 <Link
+                  activeClass="text-[#be123c]"  
                   to="events"
                   spy={true}
                   smooth={true}
                   offset={-50}
                   duration={500}
                   onClick={() => setNavbarOpen(!navbarOpen)}
-                  className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
+                  className="hover:text-primary text-slate-700 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
                 >
-                  Events
+                  <DrawBottomBorder>Events</DrawBottomBorder>
                 </Link>
               </li>
 
               <li className="flex items-center">
                 <Link
+                  activeClass="text-[#be123c]" 
                   to="about"
                   spy={true}
                   smooth={true}
-                  offset={50}
+                  offset={-300}
                   duration={500}
                   onClick={() => setNavbarOpen(!navbarOpen)}
-                  className="hover:text-slate-500 active:text-primary-dark text-slate-700 px-3 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
+                  className="hover:text-primary text-slate-700 py-4 lg:py-2 flex items-center text-sm uppercase font-semibold cursor-pointer"
                 >
-                  About Us
+                  <DrawBottomBorder>About Us</DrawBottomBorder>
                 </Link>
               </li>
 
@@ -175,3 +179,16 @@ export default function Navbar() {
     </>
   );
 }
+
+const DrawBottomBorder = ({ children, ...rest }) => {
+  return (
+    <button
+      {...rest}
+      className="group relative mx-3 px-1 py-1 transition-colors duration-[400ms] hover:text-primary uppercase"
+    >
+      <span>{children}</span>
+      {/* BOTTOM */}
+      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+    </button>
+  );
+};
