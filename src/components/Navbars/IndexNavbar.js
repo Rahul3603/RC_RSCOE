@@ -95,7 +95,7 @@ export default function Navbar() {
 
               <li className="flex items-center">
                 <Link
-                  activeClass="text-primary"  
+                  activeStyle={{color: "#be123c"}}
                   to="team"
                   spy={true}
                   smooth={true}
@@ -117,7 +117,7 @@ export default function Navbar() {
               </li> */}
               <li className="flex items-center">
                 <Link
-                  activeClass="text-[#be123c]"  
+                  activeStyle={{color: "#be123c"}}  
                   to="events"
                   spy={true}
                   smooth={true}
@@ -132,7 +132,7 @@ export default function Navbar() {
 
               <li className="flex items-center">
                 <Link
-                  activeClass="text-[#be123c]" 
+                  activeStyle={{color: "#be123c"}}
                   to="about"
                   spy={true}
                   smooth={true}
